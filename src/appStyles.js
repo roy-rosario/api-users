@@ -8,7 +8,7 @@ export const UsersContainer =  styled.div`
 export const UsersTitle = styled.div`
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-content: baseline;
    
    
 `

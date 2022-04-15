@@ -9,11 +9,12 @@ import {
   UsersInfo
 } from './appStyles'
 import {useState, useEffect} from 'react'
+import Users from './components/Users'
  
 function App() {
   const [users, setUsers] = useState([])
   const [posts, setPosts] = useState([])
-  const [expanded, setExpanded] = useState(false)
+ 
 
     useEffect(()=>{
         Axios.get('https://jsonplaceholder.typicode.com/users')
@@ -28,26 +29,13 @@ function App() {
 
   return (
     <div>
-      <UsersContainer>
-        {/* <TopHalf>
-          <UsersTitle>
-              <h2>User Name</h2>
-              <Expander onClick={()=>{setExpanded(prev => !prev)}}>
-                  {expanded? 
-                      <i className="fa fa-chevron-up" aria-hidden="true"></i>
-                      : 
-                      <i className="fa fa-chevron-down" aria-hidden="true"></i>
-                  }
-              </Expander>
-          </UsersTitle>
-          <UsersInfo>
-              <h4>Some Company</h4>
-              <p>The comapany motto</p>
-          </UsersInfo>
-        </TopHalf>
-        <BottomHalf isClicked={expanded} >
-        </BottomHalf> */}
-      </UsersContainer>
+        {users.length > 0?
+        
+            <Users users_={users} posts_={posts}/>   
+            :
+            <p>loading...</p>
+        }
+      
       
     </div>
   );
