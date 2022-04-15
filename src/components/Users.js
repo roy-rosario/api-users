@@ -24,8 +24,15 @@ function Users({users_, posts_}){
                   <TopHalf>
                     <UsersTitle>
                       <h2>{user.name}</h2>
-                      <Expander onClick={()=>{ setCurrent(user.id)
+                      <Expander onClick={()=>{ 
+                        
+                        if(current === user.id){
+                          setCurrent(null)
+                          return
+                        }
+                        setCurrent(user.id)
                         setExpanded(prev => !prev)
+
                       }}>
                         {current === user.id &&
                             expanded?
@@ -45,9 +52,8 @@ function Users({users_, posts_}){
                     </UsersInfo>
                   </TopHalf>
                   
-                  {
-                      expanded && current === user.id &&
-                      <BottomHalf  isClicked={expanded}>
+                 
+                      <BottomHalf  isClicked={current === user.id}>
                           {
                             posts_.map(post =>{
                               if(post.userId === current){
@@ -62,7 +68,7 @@ function Users({users_, posts_}){
                               })
                           }
                         </BottomHalf>
-              }
+              
 
                 </UsersContainer>
                 )
