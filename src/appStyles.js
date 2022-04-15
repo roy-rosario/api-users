@@ -20,13 +20,16 @@ export const Expander = styled.div`
 export const TopHalf = styled.div`
     background-color: cadetblue;
     padding: 1rem;
+    box-shadow: 0px 0px 3px grey;
 
 `
 
 export const BottomHalf = styled.div(props =>({
-    backgroundColor : 'magenta',
+    backgroundColor : 'white',
     height: props.isClicked? '400px' : '0px',
-    transition: 'all 0.5s ease'
+    transition: 'all 0.5s ease',
+    overflow: 'hidden',
+    boxShadow: '0px 0px 3px grey'
 }))
 
 
