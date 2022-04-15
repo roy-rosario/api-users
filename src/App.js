@@ -1,12 +1,7 @@
 // import './App.css';
 import Axios from 'axios'
 import {
-  UsersContainer,
-  UsersTitle,
-  Expander,
-  TopHalf,
-  BottomHalf,
-  UsersInfo
+  PageTitle,
 } from './appStyles'
 import {useState, useEffect} from 'react'
 import Users from './components/Users'
@@ -29,11 +24,12 @@ function App() {
 
   return (
     <div>
+        <PageTitle>select a user</PageTitle>
         {users.length > 0?
         
             <Users users_={users} posts_={posts}/>   
             :
-            <p>loading...</p>
+            <p style={{color: 'white'}}>loading...</p>
         }
       
       

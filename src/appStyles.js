@@ -1,10 +1,33 @@
 import styled from '@emotion/styled'
 
+export const PageTitle = styled.h1`
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    text-align: center;
+    color: white;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    border: 5px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 80%;
+
+    @media (min-width:900px){
+        width: 50%;
+        margin: 4rem auto;
+    }
+`
+
+
+
 export const UsersContainer =  styled.div`
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
+    @media (min-width:900px){
+        width: 50%;
+    }
 `
 
 export const UsersTitle = styled.div`
@@ -35,13 +58,14 @@ export const TopHalf = styled.div`
 
 export const BottomHalf = styled.div(props =>({
     backgroundColor : 'lightgrey',
-    height: props.isClicked? 'clamp(600px, 700px, 850px)' : '0px',
+    height: props.isClicked? '500px' : '0px',
     transition: 'height 0.5s ease',
     overflow: 'hidden',
     padding: props.isClicked? '1rem' : '0rem',
     borderBottomRightRadius: '10px',
     borderBottomLeftRadius: '10px',
-    border: props.isClicked? '1px solid lightgrey' : 'none'
+    border: props.isClicked? '1px solid lightgrey' : 'none',
+    overflowY: "scroll"
 }))
 
 
@@ -57,4 +81,14 @@ export const Post = styled.div`
     box-shadow: 0px 0px 5px lightgrey;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+    p:first-of-type{
+        border-bottom: 1px solid lightgrey;
+        text-transform: uppercase;   
+        font-weight: 400;
+        padding: 0.5rem;
+    }
+    p:last-of-type{
+        padding: 0.5rem;
+        margin: 0.75rem auto;
+    }
 `

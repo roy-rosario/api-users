@@ -62,6 +62,7 @@ function Users({users_, posts_}){
                                   
                                   <Post key={post.id}>
                                     <p>{post.title}</p>
+                                    <p>{post.body}</p>
                                   </Post>
                                   
                                   )
