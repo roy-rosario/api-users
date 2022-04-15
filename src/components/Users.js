@@ -4,7 +4,8 @@ import {
     Expander,
     TopHalf,
     BottomHalf,
-    UsersInfo
+    UsersInfo,
+    Post
   } from '../appStyles'
 import {useState} from 'react'
 
@@ -59,9 +60,9 @@ function Users({users_, posts_}){
                               if(post.userId === current){
                                 return(
                                   
-                                  <div key={post.id}>
-                                  <p>{post.title}</p>
-                                  </div>
+                                  <Post key={post.id}>
+                                    <p>{post.title}</p>
+                                  </Post>
                                   
                                   )
                                 }
