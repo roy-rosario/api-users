@@ -4,7 +4,7 @@ export const UsersContainer =  styled.div`
     width: 80%;
     margin: 0 auto;
     margin-bottom: 1rem;
-    
+    font-family: 'Roboto', sans-serif;
 `
 
 export const UsersTitle = styled.div`
@@ -14,6 +14,9 @@ export const UsersTitle = styled.div`
     color: white;
     border-bottom: 2px solid white;
     padding-bottom: 0.5rem;
+    h2{
+        font-family: 'Raleway', sans-serif;
+    }
 `
 
 export const Expander = styled.div`
@@ -25,8 +28,8 @@ export const Expander = styled.div`
 export const TopHalf = styled.div`
     background-color: cadetblue;
     padding: 1rem;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     
 `
 
@@ -36,8 +39,8 @@ export const BottomHalf = styled.div(props =>({
     transition: 'height 0.5s ease',
     overflow: 'hidden',
     padding: props.isClicked? '1rem' : '0rem',
-    borderBottomRightRadius: '5px',
-    borderBottomLeftRadius: '5px',
+    borderBottomRightRadius: '10px',
+    borderBottomLeftRadius: '10px',
     border: props.isClicked? '1px solid lightgrey' : 'none'
 }))
 
