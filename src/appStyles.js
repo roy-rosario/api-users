@@ -15,6 +15,7 @@ export const PageTitle = styled.h1`
     @media (min-width:900px){
         width: 50%;
         margin: 4rem auto;
+        font-size: 3rem;
     }
 `
 
@@ -27,6 +28,7 @@ export const UsersContainer =  styled.div`
     font-family: 'Roboto', sans-serif;
     @media (min-width:900px){
         width: 50%;
+        font-size: 1.3rem;
     }
 `
 
@@ -39,6 +41,9 @@ export const UsersTitle = styled.div`
     padding-bottom: 0.5rem;
     h2{
         font-family: 'Raleway', sans-serif;
+    }
+    @media (min-width:900px){
+        padding-bottom: 1rem;
     }
 `
 
@@ -53,6 +58,10 @@ export const TopHalf = styled.div`
     padding: 1rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
+    @media (min-width:900px){
+        padding: 2rem;
+    }
     
 `
 
@@ -73,6 +82,10 @@ export const BottomHalf = styled.div(props =>({
 export const UsersInfo = styled.div`
     color: white;
     padding-top: 0.5rem;
+
+    @media (min-width:900px){
+        padding-top: 0.5rem;
+    }    
 `
 
 export const Post = styled.div`
