@@ -29,6 +29,7 @@ function Users({users_, posts_}){
                         
                         if(current === user.id){
                           setCurrent(null)
+                          setExpanded(false)
                           return
                         }
                         setCurrent(user.id)
@@ -54,7 +55,7 @@ function Users({users_, posts_}){
                   </TopHalf>
                   
                  
-                      <BottomHalf  isClicked={current === user.id}>
+                      <BottomHalf   isClicked={current === user.id}>
                           {
                             posts_.map(post =>{
                               if(post.userId === current){
@@ -66,6 +67,9 @@ function Users({users_, posts_}){
                                   </Post>
                                   
                                   )
+                                }
+                                else{
+                                  return null
                                 }
                               })
                           }

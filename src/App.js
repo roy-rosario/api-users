@@ -1,6 +1,7 @@
 import './App.css';
 import Axios from 'axios'
 import {
+  Loading,
   PageTitle,
 } from './appStyles'
 import {useState, useEffect} from 'react'
@@ -29,7 +30,7 @@ function App() {
         
             <Users users_={users} posts_={posts}/>   
             :
-            <p style={{color: 'white'}}>loading...</p>
+            <Loading>loading...</Loading>
         }
       
       

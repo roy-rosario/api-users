@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 
+
 export const PageTitle = styled.h1`
     font-family: 'Raleway', sans-serif;
     display: block;
@@ -19,6 +20,16 @@ export const PageTitle = styled.h1`
     }
 `
 
+
+export const Loading = styled.h2`
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 900px){
+        font-size: 2rem;
+    }
+`
 
 
 export const UsersContainer =  styled.div`
@@ -50,6 +61,16 @@ export const UsersTitle = styled.div`
 export const Expander = styled.div`
     i{
         color: white;
+        
+    }
+    &:hover{
+            cursor: pointer;
+        }
+
+    @media (min-width: 900px){
+        i{
+            font-size: 1.3rem;
+        }
     }
 `
 
@@ -74,7 +95,9 @@ export const BottomHalf = styled.div(props =>({
     borderBottomRightRadius: '10px',
     borderBottomLeftRadius: '10px',
     border: props.isClicked? '1px solid lightgrey' : 'none',
-    overflowY: "scroll"
+    overflowY: "scroll",
+  
+
 }))
 
 
@@ -103,5 +126,11 @@ export const Post = styled.div`
     p:last-of-type{
         padding: 0.5rem;
         margin: 0.75rem auto;
+    }
+
+
+    @media (min-width: 900px){
+        max-width: 90%;
+        margin: 0 auto 2rem auto;
     }
 `
